@@ -1,6 +1,11 @@
 <html>
 <head>
-<title>worklog - class lesson logger</title>
+<title>worklog - class lesson logger  v005 160302</title>
+<script>
+	 function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
+	//setInterval(autoScrolling, 1000); //added by jon 160218 autoscroll bottom of page
+	//autoScrolling()
+</script>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
 </head>
@@ -24,3 +29,6 @@ $skip_lines = 0;
 include ('flatfile.inc.php');
 
 ?>
+<script>
+autoScrolling();
+</script>
