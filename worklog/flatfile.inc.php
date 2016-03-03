@@ -124,7 +124,13 @@ if ($skip_lines > 0) $data = array_slice($data, $skip_lines);
 $data[] = str_repeat($delimiter,count($structure)-1);
 
 echo '<html>';
-echo "<head><title>$data_file</title></head>";
+echo "<head><title>$data_file</title>
+<script>
+	 function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
+	//setInterval(autoScrolling, 1000); //added by jon 160218 autoscroll bottom of page
+</script>
+
+</head>";
 echo "<body><h1>$data_file</h1>";
 echo '<form method="post">';
 echo '<table>'."\n";
@@ -214,7 +220,11 @@ document.getElementById('d_e_l_e_t_e['+theid+']').checked = false;
 }
 </script>";
 
-echo '</body>';
+echo '
+<script>
+autoScrolling();
+</script>
+</body>';
 echo '</html>';
 
 ?>
