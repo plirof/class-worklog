@@ -1,5 +1,5 @@
 <?php
 
-require ('worklogs.php');
+require ('worklog.php');
 
 ?>
