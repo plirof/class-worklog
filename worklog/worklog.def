@@ -1,4 +1,5 @@
-Class,LIST,1,classA1:classA2:classC2:classC4
-Date,DATE,8,NY:CA:LA
-Entry,TEXT,70:2
-Comments,STRING,30
+ΗΜΕΡΟΜ.,DATE,8,NY:CA:LA
+ΑΦΙΞΗ,STRING,5
+ΑΝΑΧΩΡΙΣΗ,STRING,5
+ONOMA,LIST,1,BOTH:ΜΑΡΙΝΙΔΗΣ:ΠΑΠΑΔΟΠΟΥΛΟΣ
+ΣΧΟΛΙΑ,STRING,10
