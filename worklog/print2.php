@@ -19,7 +19,7 @@
 
 */
 //
-$filename = ""; // File to open. quote out this variable if you are using a form to link to this script.
+$filename = "worklog.txt"; // File to open. quote out this variable if you are using a form to link to this script.
 
 
 /*
@@ -39,18 +39,40 @@ End of No cache
 
 
 function viewlog($filename) {
+$csv_character="|/";
+$csv_character="\|";
+
 $fp = fopen($filename,"r");
 $file = fread($fp,65535);
-$replaced = eregi_replace(",", "<td>", $file);
+$replaced = eregi_replace($csv_character, "<td>", $file);
 $replaced2 = eregi_replace("\n", "<tr><td>", $replaced);
 $replaced3 = eregi_replace("\r", "<tr><td>", $replaced2);
 fclose($fp);
 
 return $replaced3;
 }
-echo "<html><head><base href=\"./\"><title>CSV File Viewer</title></head><body bgcolor=silver>";
+echo '<html><head><base href=\"./\"><title>CSV File Viewer</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+</head><body bgcolor=silver>';
 // Start the table definition of your choice
-echo "<table border=0 bordercolor=black cellspacing=0 cellpadding=5 width=100% style='font-size:10pt'>";
+echo "<table border=1 bordercolor=black cellspacing=0 cellpadding=5 width=100% style='font-size:10pt'> ";
+echo ' <TR>
+      <TH COLSPAN="1">
+         <H3><BR>Ημερομηνία</H3>
+      </TH>
+            <TH COLSPAN="1">
+         <H3><BR>Όνομα</H3>
+      </TH>
+            <TH COLSPAN="1">
+         <H3><BR>Άφιξη</H3>
+      </TH>
+            <TH COLSPAN="1">
+         <H3>Αναχώρηση</H3>
+      </TH>
+            <TH COLSPAN="1">
+         <H3><BR></H3>
+      </TH>
+   </TR><TD>';
 
 echo viewlog($filename);
 echo "</table></body></html>";
