@@ -20,7 +20,8 @@
 */
 //
 $filename = "worklog.txt"; // File to open. quote out this variable if you are using a form to link to this script.
-
+//mb_internal_encoding('utf-8');
+mb_internal_encoding('UTF-8');
 
 /*
 No cache!!
@@ -39,20 +40,20 @@ End of No cache
 
 
 function viewlog($filename) {
-$csv_character="|/";
-$csv_character="\|";
+
+$csv_character="#\|#";
 
 $fp = fopen($filename,"r");
 $file = fread($fp,65535);
-$replaced = eregi_replace($csv_character, "<td>", $file);
-$replaced2 = eregi_replace("\n", "<tr><td>", $replaced);
-$replaced3 = eregi_replace("\r", "<tr><td>", $replaced2);
-$replaced3 = eregi_replace("\00", ":00", $replaced3);
-$replaced3 = eregi_replace("\30", ":30", $replaced3);
-$replaced3 = eregi_replace("\800", "8:00", $replaced3);
-$replaced3 = eregi_replace("\1600", "16:00", $replaced3);
-fclose($fp);
+$replaced = preg_replace($csv_character, "<td>", $file);
+$replaced2 = preg_replace("#\n#u", "<tr><td>", $replaced);
+$replaced3 = preg_replace("#\r#u", "<tr><td>", $replaced2);
+$replaced3 = preg_replace("#00#u", ":00", $replaced3);
+$replaced3 = preg_replace("#30#", ":30", $replaced3);
+$replaced3 = preg_replace("#800#", "8:00", $replaced3);
+$replaced3 = preg_replace("#1600#", "16:00", $replaced3);
 
+fclose($fp);
 return $replaced3;
 }
 echo '<html><head><base href=\"./\"><title>CSV File Viewer</title>
