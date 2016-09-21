@@ -47,6 +47,10 @@ $file = fread($fp,65535);
 $replaced = eregi_replace($csv_character, "<td>", $file);
 $replaced2 = eregi_replace("\n", "<tr><td>", $replaced);
 $replaced3 = eregi_replace("\r", "<tr><td>", $replaced2);
+$replaced3 = eregi_replace("\00", ":00", $replaced3);
+$replaced3 = eregi_replace("\30", ":30", $replaced3);
+$replaced3 = eregi_replace("\800", "8:00", $replaced3);
+$replaced3 = eregi_replace("\1600", "16:00", $replaced3);
 fclose($fp);
 
 return $replaced3;
