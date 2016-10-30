@@ -1,7 +1,7 @@
 <?php
-date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
+
 #####################################################################################
-# Flat File Database Manager 1.2
+# Flat File Database Manager 1.2jmod02-link object type 160920
 #####################################################################################
 # Visit http://www.zubrag.com/scripts/ for updates
 #####################################################################################
@@ -21,7 +21,8 @@ date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for dat
 #          title,LOGICAL,1,value for Yes,value for No
 # LIST:    Rendered as list box or combo box. Row format:
 #          title,LIST,number of rows visible at a time,colon ":" separated allowed values
-#
+# LINK:  Rendered as regular input field. Row format:  //JONMOD
+#          title,LINK,length#
 # Sample data definition file contents:
 # City,LIST,3,City1:City2:City3:City4:City5
 # State,LIST,1,NY:CA:LA
@@ -33,7 +34,7 @@ date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for dat
 # Fields delimiter
 # --> $delimiter
 #####################################################################################
-
+date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 // strip slashes
 if (get_magic_quotes_gpc()) {
   function stripslashes_deep($value) {
@@ -122,16 +123,19 @@ if ($skip_lines > 0) $data = array_slice($data, $skip_lines);
 
 // add "new line" holder
 $data[] = str_repeat($delimiter,count($structure)-1);
+//array_unshift($data, str_repeat($delimiter,count($structure)-1));//added by jon 160217
+
 
 echo '<html>';
 echo "<head><title>$data_file</title>
 <script>
-	 function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
+	function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
 	//setInterval(autoScrolling, 1000); //added by jon 160218 autoscroll bottom of page
 </script>
-
 </head>";
-echo "<body><h1>$data_file</h1>";
+echo "<body><h1>$data_file</h1>
+
+";
 echo '<form method="post">';
 echo '<table>'."\n";
 
@@ -191,6 +195,14 @@ foreach($data as $datakey => $line) {
         $val_yes = trim($structure[$key]['values'][0]);
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" type="checkbox" '.(($item == $val_yes) ? 'checked' : '').' value="'.$val_yes.'" />';
         break;
+// +++++++++++++++++++++++++ added by john to show a link (adds HTTP:// ) 20160428+++++++++++++++++++++++        
+# LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
+#          title,LINK,length	
+      case 'LINK':
+        echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
+        echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
+        break;        
+// ------------------------ added by john to show a link (adds HTTP://)----------------------
 # LIST:    Rendered as list box or combo box. Row format:
 #          title,LIST,number of rows visible at a time,colon ":" separated allowed values		
       case 'LIST':
@@ -205,6 +217,7 @@ foreach($data as $datakey => $line) {
   }  // end of   foreach ($items as $key => $item) {
   
   // Mark for delete if last record (i.e. Add option). In this way we'll skip adding empty records
+  
   echo "\n  <td><input id='d_e_l_e_t_e[{$datakey}]'  name='d_e_l_e_t_e[{$datakey}]' type='checkbox' ".($datakey == count($data)-1 ? 'checked' : '')." /></td>";
   echo "\n</tr>\n";
 
@@ -218,13 +231,13 @@ echo "</form>
 function cdf(theid) {
 document.getElementById('d_e_l_e_t_e['+theid+']').checked = false;
 }
-</script>";
-
-echo '
+</script>
 <script>
 autoScrolling();
 </script>
-</body>';
+";
+
+echo '</body>';
 echo '</html>';
 
 ?>
