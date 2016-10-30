@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 #####################################################################################
 # Flat File Database Manager 1.2jmod02-link object type 160920
 #####################################################################################
@@ -29,12 +29,13 @@
 # Zip,STRING,8
 # Active,LOGICAL,1,Y:N
 # Comments,TEXT,30:2
+# website,LINK,30
 # --> $structure_file
 ######################################################################################
 # Fields delimiter
 # --> $delimiter
 #####################################################################################
-date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
+
 // strip slashes
 if (get_magic_quotes_gpc()) {
   function stripslashes_deep($value) {
@@ -199,8 +200,11 @@ foreach($data as $datakey => $line) {
 # LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
 #          title,LINK,length	
       case 'LINK':
+      	$item = str_replace("http://", "", $item, 1);
+      	$item = str_replace("https://", "", $item, 1);
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
-        echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
+//        echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
+        echo '<BR><a href="http://'.$item.'" >LINK</a>';        
         break;        
 // ------------------------ added by john to show a link (adds HTTP://)----------------------
 # LIST:    Rendered as list box or combo box. Row format:
