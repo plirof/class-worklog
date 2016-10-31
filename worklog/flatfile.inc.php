@@ -200,8 +200,8 @@ foreach($data as $datakey => $line) {
 # LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
 #          title,LINK,length	
       case 'LINK':
-      	$item = str_replace("http://", "", $item, 1);
-      	$item = str_replace("https://", "", $item, 1);
+      	//$item = str_replace("http://", "", $item, 1); // caused an PHP Fatal error:  Only variables can be passed by reference in /home/trister/public_html/note.cu.cc/quicknotes_worklog_/flatfile.inc.php on line 203
+      	//$item = str_replace("https://", "", $item, 1);
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
 //        echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
         echo '<BR><a href="http://'.$item.'" >LINK</a>';        
