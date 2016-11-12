@@ -113,6 +113,7 @@ if (isset($_POST['submit'])) {
     } // for
     fclose($f);
   } // if
+   header("location: index.php");   //added jon 161112 by jon to avoid resubmissions  (if you restore session will always do a normal load)	
 }
 
 $data = file($data_file);
