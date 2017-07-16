@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 #####################################################################################
-# Flat File Database Manager 1.2jmod02-link object type 160920
+# Flat File Database Manager 1.2jmod03-link object type 170716a
 #####################################################################################
 # Visit http://www.zubrag.com/scripts/ for updates
 #####################################################################################
@@ -201,10 +201,11 @@ foreach($data as $datakey => $line) {
 # LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
 #          title,LINK,length	
       case 'LINK':
-      	//$item = str_replace("http://", "", $item, 1); // caused an PHP Fatal error:  Only variables can be passed by reference in /home/trister/public_html/note.cu.cc/quicknotes_worklog_/flatfile.inc.php on line 203
-      	//$item = str_replace("https://", "", $item, 1);
-        echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
-//        echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
+        $item = preg_replace("/^http:\/\//i", "", $item); //remove http from saved text NOTE might have to add http or https eventually jon 170716a
+        $item = preg_replace("/^https:\/\//i", "", $item);//remove http from saved text NOTE might have to add http or https eventually jon 170716a
+        quicknotes_worklog_/flatfile.inc.php on line 203
+      	echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
+//      echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
         echo '<BR><a href="http://'.$item.'" >LINK</a>';        
         break;        
 // ------------------------ added by john to show a link (adds HTTP://)----------------------
