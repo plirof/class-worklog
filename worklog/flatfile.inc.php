@@ -203,7 +203,7 @@ foreach($data as $datakey => $line) {
       case 'LINK':
         $item = preg_replace("/^http:\/\//i", "", $item); //remove http from saved text NOTE might have to add http or https eventually jon 170716a
         $item = preg_replace("/^https:\/\//i", "", $item);//remove http from saved text NOTE might have to add http or https eventually jon 170716a
-        quicknotes_worklog_/flatfile.inc.php on line 203
+     #   quicknotes_worklog_/flatfile.inc.php on line 203
       	echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
 //      echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
         echo '<BR><a href="http://'.$item.'" >LINK</a>';        
