@@ -1,4 +1,5 @@
 Class,LIST,1,classA1:classA2:classC2:classC4
 Date,DATE,8,NY:CA:LA
 Entry,TEXT,70:2
+link,LINK,30
 Comments,STRING,30
