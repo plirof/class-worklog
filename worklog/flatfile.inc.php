@@ -237,11 +237,15 @@ echo "</form>
 function cdf(theid) {
 document.getElementById('d_e_l_e_t_e['+theid+']').checked = false;
 }
-</script>
+</script> ";
+
+include("show_filter.php"); //added 181020a jon to display a list of options to filter rows
+
+echo '
 <script>
 autoScrolling();
 </script>
-";
+';
 
 echo '</body>';
 echo '</html>';

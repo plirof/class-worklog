@@ -1,3 +1,2 @@
 classA1|20141208|Introduction to Computers|www.computer.org|Opened the old PC in the class
-classB1|20141206|Logo program||Created rectangle,triangle,house
-
+classA1|20141206|Logo program||Created rectangle,triangle,house
