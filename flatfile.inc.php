@@ -1,7 +1,14 @@
 <?php
 date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 #####################################################################################
-# Flat File Database Manager 1.2jmod03-link object type 170716a
+# Flat File Database Manager 1.2jmod04-link object type 190223a
+#
+# changes
+# ver1.2jmod04-link object type 190223a :
+#   - Added red color to DELETE/MARK checkbox
+#
+#
+# ver1.2jmod03-link object type 170716a
 #####################################################################################
 # Visit http://www.zubrag.com/scripts/ for updates
 #####################################################################################
@@ -115,7 +122,7 @@ if (isset($_POST['submit'])) {
     } // for
     fclose($f);
   } // if
-	header("location: index.php");   //added jon 161112 by jon to avoid resubmissions  (if you restore session will always do a normal load)	
+  header("location: index.php");   //added jon 161112 by jon to avoid resubmissions  (if you restore session will always do a normal load)  
 }
 
 $data = file($data_file);
@@ -131,8 +138,8 @@ $data[] = str_repeat($delimiter,count($structure)-1);
 echo '<html>';
 echo "<head><title>$data_file</title>
 <script>
-	function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
-	//setInterval(autoScrolling, 1000); //added by jon 160218 autoscroll bottom of page
+  function autoScrolling() { window.scrollTo(0,document.body.scrollHeight); }
+  //setInterval(autoScrolling, 1000); //added by jon 160218 autoscroll bottom of page
 </script>
 </head>";
 echo "<body><h1>$data_file</h1>
@@ -167,24 +174,24 @@ foreach($data as $datakey => $line) {
     $item = htmlspecialchars(trim($item));
     $name = $structure[$key]['name'];
     echo "\n".'  <td valign="top">';
-	//echo "<h1>$item</h1>";
+  //echo "<h1>$item</h1>";
     switch ($structure[$key]['type']) {
 # STRING:  Rendered as regular input field. Row format:
-#          title,STRING,length	
+#          title,STRING,length  
       case 'STRING':
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
         break;
-# DATE:  Rendered as regular input field. Row format:		 Added by jon
-#          title,STRING,length			
+# DATE:  Rendered as regular input field. Row format:    Added by jon
+#          title,STRING,length      
       case 'DATE':   // added by jon 20141208
-		
-		if ($item==null) $item=date("Ymd");
+    
+    if ($item==null) $item=date("Ymd");
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
         break;
 # TEXT:    Rendered as text area. Row format:
 #          title,TEXT,columns,rows
 
-   	  case 'TEXT':
+      case 'TEXT':
         $rc = explode(':',$structure[$key]['format']);
         $cols = trim($rc[0]);
         $rows = trim($rc[1]);
@@ -193,24 +200,24 @@ foreach($data as $datakey => $line) {
 # LOGICAL: Rendered as check box (flag). Row format:
 #          title,LOGICAL,1,value for Yes,value for No
 
-		case 'LOGICAL':
+    case 'LOGICAL':
         $val_yes = trim($structure[$key]['values'][0]);
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" type="checkbox" '.(($item == $val_yes) ? 'checked' : '').' value="'.$val_yes.'" />';
         break;
 // +++++++++++++++++++++++++ added by john to show a link (adds HTTP:// ) 20160428+++++++++++++++++++++++        
 # LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
-#          title,LINK,length	
+#          title,LINK,length  
       case 'LINK':
         $item = preg_replace("/^http:\/\//i", "", $item); //remove http from saved text NOTE might have to add http or https eventually jon 170716a
         $item = preg_replace("/^https:\/\//i", "", $item);//remove http from saved text NOTE might have to add http or https eventually jon 170716a
-     #   quicknotes_worklog_/flatfile.inc.php on line 203
-      	echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
+#        quicknotes_worklog_/flatfile.inc.php on line 203
+        echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" value="'.$item.'" size="'.$structure[$key]['format'].'" />';
 //      echo '<BR><a href="http://'.$item.'" >'.$item.'</a>';
         echo '<BR><a href="http://'.$item.'" >LINK</a>';        
         break;        
 // ------------------------ added by john to show a link (adds HTTP://)----------------------
 # LIST:    Rendered as list box or combo box. Row format:
-#          title,LIST,number of rows visible at a time,colon ":" separated allowed values		
+#          title,LIST,number of rows visible at a time,colon ":" separated allowed values   
       case 'LIST':
         echo '<select onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" size="'.$structure[$key]['format'].'">';
         foreach($structure[$key]['values'] as $value) {
@@ -224,7 +231,7 @@ foreach($data as $datakey => $line) {
   
   // Mark for delete if last record (i.e. Add option). In this way we'll skip adding empty records
   
-  echo "\n  <td><input id='d_e_l_e_t_e[{$datakey}]'  name='d_e_l_e_t_e[{$datakey}]' type='checkbox' ".($datakey == count($data)-1 ? 'checked' : '')." /></td>";
+  echo "\n  <td><div style='background-color: red;'><input id='d_e_l_e_t_e[{$datakey}]'  name='d_e_l_e_t_e[{$datakey}]' type='checkbox' ".($datakey == count($data)-1 ? 'checked' : '')." /></div></td>";
   echo "\n</tr>\n";
 
 }
@@ -237,15 +244,16 @@ echo "</form>
 function cdf(theid) {
 document.getElementById('d_e_l_e_t_e['+theid+']').checked = false;
 }
-</script> ";
+</script>";
 
-include("show_filter.php"); //added 181020a jon to display a list of options to filter rows
+include('show_filter.php'); //added 181020a jon to display a list of options to filter rows   
 
-echo '
+
+echo "
 <script>
 autoScrolling();
 </script>
-';
+";
 
 echo '</body>';
 echo '</html>';
