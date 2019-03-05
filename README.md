@@ -17,3 +17,13 @@ Instructions :
 http://...../backup.php?name=worklog
 will create a backup for the file names worklog.txt -> worklog_backup_170504.txt
 (you must know the actual filemname of the storage - eg worklog.txt to actually work)
+
+
+
+Changes:
+flatfile.inc_1.2jmod006_190305_ignore_empty_lines.php
+
+
+
+Bugs:
+Bug: Τα κενά στο αρχείο δημιουργούν προβλήματα. Να αφαιρούνται... (FIXED in v1.2jmod006_190305)
