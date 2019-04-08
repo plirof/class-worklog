@@ -1,12 +1,9 @@
 <?php
 date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 #####################################################################################
-# Flat File Database Manager 1.2jmod10-190408_$show_logical_header shows text in checkboxes (alt to freeze 1st row)
+# Flat File Database Manager 1.2jmod08-190319_shows_selected_&_class_name on list text 190319
 #
 # changes
-# 1.2jmod10-190408_$show_logical_header shows text in checkboxes (alt to freeze 1st row)
-# 1.2jmod09-190320_sortablejs_sprintf
-# 1.2jmod08-190319_shows_selected_&_class_name on list text
 # 1.2jmod07-LISTQUARTER 190312
 # ver1.2jmod06-RTfilter 190305
 # ver1.2jmod05-Reat time client filter 190224a
@@ -67,8 +64,6 @@ if (get_magic_quotes_gpc()) {
 if(empty($show_empty_lines))$show_empty_lines=false; //If disabled(false) might have problem if you have empty lines
 if(empty($add_class_to_element))$add_class_to_element=true; //190319 adds class name to each element(so we can add custom js for this element )
 if(empty($show_internal_element_text_outside))$show_internal_element_text_outside=true;
-if(empty($sorttable_js))$sorttable_js=true;
-if(empty($show_logical_header))$show_logical_header=false; //If disabled(false) might have problem if you have empty lines
 
 $structure_tmp = file($structure_file);
 $structure = array();
@@ -167,18 +162,15 @@ echo "<head><title>$data_file</title>
 }
 
 
-</style>";
+</style>
 
-if($sorttable_js) echo'<script src="sorttable.js"></script>'."\n";
-
-echo "</head>";
+</head>";
 echo "<body><h1>$data_file</h1>
+
 ";
 
 echo '<form method="post">';
-$table_class='';
-if($sorttable_js) $table_class=' class="sortable" ';
-echo "\n".'<table id="myTable" '.$table_class.' border=1 >'."\n";
+echo "\n".'<table id="myTable" border=1 >'."\n";
 
 // output header
 echo '<tr >';
@@ -239,7 +231,6 @@ foreach($data as $datakey => $line) {
     case 'LOGICAL':
         $val_yes = trim($structure[$key]['values'][0]);
         echo '<input onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" type="checkbox" '.(($item == $val_yes) ? 'checked' : '').' value="'.$val_yes.'" />';
-        if($show_logical_header) echo $structure[$key]['name'];// show header column name (alternative to freeze first row)
         break;
 // +++++++++++++++++++++++++ added by john to show a link (adds HTTP:// ) 20160428+++++++++++++++++++++++        
 # LINK:  Rendered as regular input field (like STRING) but creates a link. Row format:
@@ -256,13 +247,12 @@ foreach($data as $datakey => $line) {
 # LIST:    Rendered as list box or combo box. Row format:
 #          title,LIST,number of rows visible at a time,colon ":" separated allowed values   
       case 'LIST':
-        if($show_internal_element_text_outside)echo '<b>'.sprintf("%02d", $item).'</b><BR>'; 
         echo '<select onchange="cdf('.$datakey.')" name="'.$name.'['.$datakey.']" '.$class_name.' size="'.$structure[$key]['format'].'">';
         foreach($structure[$key]['values'] as $value) {
           echo '<option value="'.$value.'" '.($value == $item ? 'selected' : '').'>'.$value.'</option>';
         }
         echo '</select>';
-        
+        if($show_internal_element_text_outside)echo '<BR><b>'.$item.'</b>'; 
         break;
 # LISTQUARTER:    Rendered as list box or combo box with monthQuarters (not much usefull atm). Row format:
 #          title,LIST,number of rows visible at a time,colon ":" separated allowed values   
