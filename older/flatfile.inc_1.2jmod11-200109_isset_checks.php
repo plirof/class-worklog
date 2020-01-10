@@ -71,11 +71,11 @@ if (get_magic_quotes_gpc()) {
   //$_COOKIE = stripslashes_deep($_COOKIE);
 }
 
-if(!isset($show_!isset_lines))$show_!isset_lines=false; //If disabled(false) might have problem if you have !isset lines
+if(!isset($show_empty_lines))$show_empty_lines=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($add_class_to_element))$add_class_to_element=true; //190319 adds class name to each element(so we can add custom js for this element )
 if(!isset($show_internal_element_text_outside))$show_internal_element_text_outside=true;
 if(!isset($sorttable_js))$sorttable_js=true;
-if(!isset($show_logical_header))$show_logical_header=false; //If disabled(false) might have problem if you have !isset lines
+if(!isset($show_logical_header))$show_logical_header=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($show_submit_button))$show_submit_button=true;  //200108 index.php:false-read-only / edit.php :true shows submit
 
 $structure_tmp = file($structure_file);
