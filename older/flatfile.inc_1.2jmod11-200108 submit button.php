@@ -3,7 +3,7 @@ date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for dat
 #####################################################################################
 # Flat File Database Manager 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
 #
-# changes:
+# changes
 # 1.2jmod11-200108 submit button option , edit.php , index.php=only view)
 # 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
 # 1.2jmod10-190409e_LISTWEEKSSCH
