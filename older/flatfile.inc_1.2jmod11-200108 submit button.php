@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for date 160920
 #####################################################################################
-# Flat File Database Manager 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
+# Flat File Database Manager 1.2jmod11-200108_submit_button
 #
-# changes
-# 1.2jmod11-200108 submit button option , edit.php , index.php=only view)
+# changes:
+# 1.2jmod11-200108_submit_button option , edit.php , index.php=only view)
 # 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
 # 1.2jmod10-190409e_LISTWEEKSSCH
 # 1.2jmod10-190408_$show_logical_header shows text in checkboxes (alt to freeze 1st row)
@@ -334,7 +334,7 @@ foreach($data as $datakey => $line) {
 echo '<tr><td colspan=255 align=center></td></tr>';
 print '<input type="text" id="myRTFilterInput" onkeyup="myRTFilterFunction()" placeholder="Search for names..">';
 echo '</table>';
-if ($show_submit_button) echo '<center><input type="submit" name="submit" value="Save Changes and Delete marked" style="border:1px solid red"></center>'; //200108 show/hide submit button
+if ($show_submit_button) {echo '<center><input type="submit" name="submit" value="Save Changes and Delete marked" style="border:1px solid red"></center>';} else {echo '<center>READ ONLY MODE</center>';}//200108 show/hide submit button'
 echo "</form>
 
 <script>
