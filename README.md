@@ -21,13 +21,18 @@ will create a backup for the file names worklog.txt -> worklog_backup_170504.txt
 
 
 Changes:
+- 1.2jmod11-201028_checkbox_show_submit show only when you check a checkbox
+- 1.2jmod11-200109_isset_checks_instead_of_from_empty() to isset()
+- 1.2jmod11-200108_submit_button option , edit.php , index.php=only view)
+- 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
+- 1.2jmod10-190409e_LISTWEEKSSCH
 - 1.2jmod10-190408_$show_logical_header shows text in checkboxes (alt to freeze 1st row)
 - 1.2jmod09-190320_sortablejs_sprintf
 - 1.2jmod08-190319_shows_selected_&_class_name on list text
 - 1.2jmod07-LISTQUARTER 190312
-- ver1.2jmod06-RTfilter 190305
-- ver1.2jmod05-Reat time client filter 190224a
-- ver1.2jmod04-link object type 190223a :
+- 1.2jmod06-RTfilter 190305
+- 1.2jmod05-Reat time client filter 190224a
+- 1.2jmod04-link object type 190223a :
 - Added red color to DELETE/MARK checkbox
 - ver1.2jmod03-link object type 170716a
 
