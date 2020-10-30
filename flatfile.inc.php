@@ -4,7 +4,7 @@ date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for dat
 # Flat File Database Manager 1.2jmod11-200109_isset_checks
 #
 # changes:
-# 1.2jmod11-201028_checkbox_show_submit show only when you check a checkbox
+# 1.2jmod11-201028b_checkbox_show_submit show only when you check a checkbox
 # 1.2jmod11-200109_isset_checks_instead_of_from_empty() to isset()
 # 1.2jmod11-200108_submit_button option , edit.php , index.php=only view)
 # 1.2jmod10-190410_sorting fix TEXTAREA show outside element if column name =Week (HARDCODED)
@@ -74,8 +74,8 @@ if (get_magic_quotes_gpc()) {
 
 if(!isset($show_empty_lines))$show_empty_lines=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($add_class_to_element))$add_class_to_element=true; //190319 adds class name to each element(so we can add custom js for this element )
-if(!isset($show_internal_element_text_outside))$show_internal_element_text_outside=true;
-if(!isset($sorttable_js))$sorttable_js=true;
+if(!isset($show_internal_element_text_outside))$show_internal_element_text_outside=false; //Show element text outside (Helps sorting!!)
+if(!isset($sorttable_js))$sorttable_js=true; // might need $show_internal_element_text_outside=true
 if(!isset($show_logical_header))$show_logical_header=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($show_submit_button))$show_submit_button=true;  //200108 index.php:false-read-only / edit.php :true shows submit
 if(!isset($checkbox_show_submit))$checkbox_show_submit=true;  //201028 $checkbox_show_submit show only when you check a checkbox
