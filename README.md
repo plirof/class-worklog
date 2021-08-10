@@ -1,7 +1,10 @@
 # TEST with password protect 210810
-SCRIPT
+1 file SCRIPT
 http://www.zubrag.com/scripts/password-protect.php
 http://www.zubrag.com/forum/index.php?topic=45.0
+Adding logout link : http://www.zubrag.com/forum/index.php/topic,202.0.html 
+ALTERNATIVE : http://www.zubrag.com/scripts/password-protect-advanced.php
+
 
 Password protect your content with Web Page Password Protect by just adding one line of PHP code to your page source. Script will present user with password entry form, and will not let visitor see your private content without providing a password.
 Multiple user accounts support, improved security, automatic logout, and manual logout feature.

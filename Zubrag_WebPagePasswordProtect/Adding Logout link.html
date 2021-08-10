@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.zubrag.com/forum/index.php/topic,202.0.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="stylesheet" href="./Adding Logout link_files/minified_99589c90f861eba10023bcf4901d3d64.css">
+	<style>
+	img.avatar { max-width: 65px; max-height: 65px; }
+	
+	.postarea .bbc_img { max-width: 320px; }
+	
+	.postarea .bbc_img { max-height: 320px; }
+	
+	</style>
+	<script>
+		var smf_theme_url = "http://www.zubrag.com/forum/Themes/default";
+		var smf_default_theme_url = "http://www.zubrag.com/forum/Themes/default";
+		var smf_images_url = "http://www.zubrag.com/forum/Themes/default/images";
+		var smf_smileys_url = "http://www.zubrag.com/forum/Smileys";
+		var smf_smiley_sets = "";
+		var smf_smiley_sets_default = "";
+		var smf_scripturl = "http://www.zubrag.com/forum/index.php";
+		var smf_iso_case_folding = false;
+		var smf_charset = "UTF-8";
+		var smf_session_id = "41740e67422b2ced47ffa49054c4932d";
+		var smf_session_var = "c8fa1ca236";
+		var smf_member_id;
+		var ajax_notification_text = 'Loading...';
+		var help_popup_heading_text = 'A little lost? Let me explain:';
+		var banned_text = 'Sorry Guest, you are banned from using this forum!';
+		var smf_txt_expand = 'Expand';
+		var smf_txt_shrink = 'Shrink';
+		var smf_quote_expand = false;
+	</script>
+	<script src="./Adding Logout link_files/jquery.min.js"></script>
+	<script src="./Adding Logout link_files/jquery.sceditor.bbcode.min.js"></script>
+	<script src="./Adding Logout link_files/minified_5ee601dc81d6a8a6b7ef42a58a114986.js"></script>
+	<script src="./Adding Logout link_files/minified_dd67fd7688e520aec63fec1ce1df115c.js" defer=""></script>
+	<script>
+		var smf_smileys_url = 'http://www.zubrag.com/forum/Smileys/';
+		var bbc_quote_from = 'Quote from';
+		var bbc_quote = 'Quote';
+		var bbc_search_on = 'on';
+	var smf_you_sure ='Are you sure you want to do this?';
+	</script>
+	<title>Adding Logout link</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:site_name" content="Zubrag.com :: Forum">
+	<meta property="og:title" content="Adding Logout link">
+	<meta property="og:url" content="http://www.zubrag.com/forum/index.php/topic,202.0.html">
+	<meta property="og:description" content="Adding Logout link">
+	<meta name="description" content="Adding Logout link">
+	<meta name="theme-color" content="#557EA0">
+	<link rel="canonical" href="http://www.zubrag.com/forum/index.php/topic,202.0.html">
+	<link rel="help" href="http://www.zubrag.com/forum/index.php?action=help">
+	<link rel="contents" href="http://www.zubrag.com/forum/index.php">
+	<link rel="search" href="http://www.zubrag.com/forum/index.php?action=search">
+	<link rel="alternate" type="application/rss+xml" title="Zubrag.com :: Forum - RSS" href="http://www.zubrag.com/forum/index.php?action=.xml;type=rss2;board=11">
+	<link rel="alternate" type="application/atom+xml" title="Zubrag.com :: Forum - Atom" href="http://www.zubrag.com/forum/index.php?action=.xml;type=atom;board=11">
+	<link rel="next" href="http://www.zubrag.com/forum/index.php/topic,202.14.html">
+	<link rel="index" href="http://www.zubrag.com/forum/index.php/board,11.0.html"><script type="text/javascript">
+        var ct_date = new Date(), 
+            ctTimeMs = new Date().getTime(),
+            ctMouseEventTimerFlag = true, //Reading interval flag
+            ctMouseData = [],
+            ctMouseDataCounter = 0;
+
+        function ctSetCookie(c_name, value) {
+            document.cookie = c_name + "=" + encodeURIComponent(value) + "; path=/";
+        }
+        ctSetCookie("ct_ps_timestamp", Math.floor(new Date().getTime()/1000));
+        ctSetCookie("ct_fkp_timestamp", "0");
+        ctSetCookie("ct_pointer_data", "0");
+        ctSetCookie("ct_timezone", "0");
+
+        setTimeout(function(){
+            ctSetCookie("ct_checkjs", "1834753513");
+            ctSetCookie("ct_timezone", ct_date.getTimezoneOffset()/60*(-1));
+        },1000);
+
+        //Writing first key press timestamp
+        var ctFunctionFirstKey = function output(event){
+            var KeyTimestamp = Math.floor(new Date().getTime()/1000);
+            ctSetCookie("ct_fkp_timestamp", KeyTimestamp);
+            ctKeyStopStopListening();
+        }
+
+        //Reading interval
+        var ctMouseReadInterval = setInterval(function(){
+            ctMouseEventTimerFlag = true;
+        }, 150);
+            
+        //Writting interval
+        var ctMouseWriteDataInterval = setInterval(function(){
+            ctSetCookie("ct_pointer_data", JSON.stringify(ctMouseData));
+        }, 1200);
+
+        //Logging mouse position each 150 ms
+        var ctFunctionMouseMove = function output(event){
+            if(ctMouseEventTimerFlag == true){
+                
+                ctMouseData.push([
+                    Math.round(event.pageY),
+                    Math.round(event.pageX),
+                    Math.round(new Date().getTime() - ctTimeMs)
+                ]);
+                
+                ctMouseDataCounter++;
+                ctMouseEventTimerFlag = false;
+                if(ctMouseDataCounter >= 100){
+                    ctMouseStopData();
+                }
+            }
+        }
+
+        //Stop mouse observing function
+        function ctMouseStopData(){
+            if(typeof window.addEventListener == "function"){
+                window.removeEventListener("mousemove", ctFunctionMouseMove);
+            }else{
+                window.detachEvent("onmousemove", ctFunctionMouseMove);
+            }
+            clearInterval(ctMouseReadInterval);
+            clearInterval(ctMouseWriteDataInterval);                
+        }
+
+        //Stop key listening function
+        function ctKeyStopStopListening(){
+            if(typeof window.addEventListener == "function"){
+                window.removeEventListener("mousedown", ctFunctionFirstKey);
+                window.removeEventListener("keydown", ctFunctionFirstKey);
+            }else{
+                window.detachEvent("mousedown", ctFunctionFirstKey);
+                window.detachEvent("keydown", ctFunctionFirstKey);
+            }
+        }
+
+        if(typeof window.addEventListener == "function"){
+            window.addEventListener("mousemove", ctFunctionMouseMove);
+            window.addEventListener("mousedown", ctFunctionFirstKey);
+            window.addEventListener("keydown", ctFunctionFirstKey);
+        }else{
+            window.attachEvent("onmousemove", ctFunctionMouseMove);
+            window.attachEvent("mousedown", ctFunctionFirstKey);
+            window.attachEvent("keydown", ctFunctionFirstKey);
+        }
+    </script>
+</head>
+<body id="chrome" class="action_messageindex board_11">
+<div id="footerfix">
+	<div id="top_section">
+		<div class="inner_wrap">
+			<ul class="floatleft welcome">
+				<li>Welcome to <strong>Zubrag.com :: Forum</strong>. Please <a href="http://www.zubrag.com/forum/index.php?action=login" onclick="return reqOverlayDiv(this.href, &#39;Login&#39;);">login</a> or <a href="http://www.zubrag.com/forum/index.php?action=signup">sign up</a>.</li>
+			</ul>
+			<form id="search_form" class="floatright" action="http://www.zubrag.com/forum/index.php?action=search2" method="post" accept-charset="UTF-8">
+				<input type="search" name="search" value="">&nbsp;
+				<select name="search_selection">
+					<option value="all">Entire forum </option>
+					<option value="topic" selected="">This topic</option>
+					<option value="board">This board</option>
+				</select>
+				<input type="hidden" name="sd_topic" value="202">
+				<input type="submit" name="search2" value="Search" class="button">
+				<input type="hidden" name="advanced" value="0">
+			</form>
+		</div><!-- .inner_wrap -->
+	</div><!-- #top_section -->
+	<div id="header">
+		<h1 class="forumtitle">
+			<a id="top" href="http://www.zubrag.com/forum/index.php">Zubrag.com :: Forum</a>
+		</h1>
+		<img id="smflogo" src="./Adding Logout link_files/smflogo.svg" alt="Simple Machines Forum" title="Simple Machines Forum">
+	</div>
+	<div id="wrapper">
+		<div id="upper_section">
+			<div id="inner_section">
+				<div id="inner_wrap">
+					<div class="user">
+						August 10, 2021, 01:05:21 PM
+					</div>
+					<hr class="clear">
+				</div>
+				<a class="menu_icon mobile_user_menu"></a>
+				<div id="main_menu">
+					<div id="mobile_user_menu" class="popup_container">
+						<div class="popup_window description">
+							<div class="popup_heading">Mobile Main Menu
+								<a href="javascript:void(0);" class="main_icons hide_popup"></a>
+							</div>
+							
+					<ul class="dropmenu menu_nav sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+						<li class="button_home">
+							<a class="active" href="http://www.zubrag.com/forum/index.php">
+								<span class="main_icons home"></span><span class="textmenu">Home</span>
+							</a>
+						</li>
+						<li class="button_search">
+							<a href="http://www.zubrag.com/forum/index.php?action=search">
+								<span class="main_icons search"></span><span class="textmenu">Search</span>
+							</a>
+						</li>
+						<li class="button_signup">
+							<a href="http://www.zubrag.com/forum/index.php?action=signup">
+								<span class="main_icons signup"></span><span class="textmenu">Sign Up</span>
+							</a>
+						</li>
+					</ul><!-- .menu_nav -->
+						</div>
+					</div>
+				</div>
+				<div class="navigate_section">
+					<ul>
+						<li>
+							<a href="http://www.zubrag.com/forum/index.php"><span>Zubrag.com :: Forum</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php#c2"><span>zubrag.com</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/board,3.0.html"><span>Questions About Our Scripts</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/board,11.0.html"><span>Password Protect</span></a>
+						</li>
+						<li class="last">
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/topic,202.0.html"><span>Adding Logout link</span></a>
+						</li>
+					</ul>
+				</div><!-- .navigate_section -->
+			</div><!-- #inner_section -->
+		</div><!-- #upper_section -->
+		<div id="content_section">
+			<div id="main_content_section">
+		<div id="display_head" class="information">
+			<h2 class="display_title">
+				<span id="top_subject">Adding Logout link</span> <span class="main_icons sticky"></span>
+			</h2>
+			<p>Started by zubrag, June 16, 2007, 12:39:38 AM</p>
+			<span class="nextlinks floatright"></span>
+		</div><!-- #display_head -->
+		<a id="msg703"></a>
+		<div class="pagesection top">
+			
+		<div class="buttonlist floatright">
+			
+				<a class="button button_strip_print" href="http://www.zubrag.com/forum/index.php?action=printpage;topic=202.0" rel="nofollow">Print</a>
+		</div>
+			 
+			<div class="pagelinks floatleft">
+				<a href="http://www.zubrag.com/forum/index.php/topic,202.0.html#bot" class="button">Go Down</a>
+				<span class="pages">Pages</span><span class="current_page">1</span> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.14.html">2</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.28.html">3</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.42.html">4</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.14.html"><span class="main_icons next_page"></span></a> 
+			</div>
+		</div>
+		<div class="mobile_buttons floatright">
+			<a class="button mobile_act">User actions</a>
+			
+		</div>
+		<div id="forumposts">
+			<form action="http://www.zubrag.com/forum/index.php?action=quickmod2;topic=202.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" onsubmit="return oQuickModify.bInEditMode ? oQuickModify.modifySave(&#39;41740e67422b2ced47ffa49054c4932d&#39;, &#39;c8fa1ca236&#39;) : false">
+				<div class="windowbg">
+					
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_703" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=703" rel="nofollow">Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=703" rel="nofollow" title="Adding Logout link" class="smalltext">June 16, 2007, 12:39:38 AM</a>
+									<span class="page_number floatright">
+										 
+									</span>
+									<span class="smalltext modified floatright" id="modified_703">
+									</span>
+								</h5>
+								<div id="msg_703_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="703" id="msg_703">
+									Password Protector will <b>automatically logout</b> user when browser is closed (if TIMEOUT_MINUTES is set to 0). <br>But script also supports a <b>manual logout</b> feature which you may find useful.<br><br>In order to implement manual logout feature you'll have to accomplish following steps:<br><br><b>1. Setup logout URL in the script</b><br><br>If you look at the password_protect.php source code you'll see following<br><br>// User will be redirected to this page after logout<br>define('LOGOUT_URL', 'http://www.example.com/');<br><br><b>2. Add Logout link on your website</b><br><br>Add following HTML code on your site pages wherever you want a logout link to be shown<br><br>&lt;a href="http://www.example.com/path/to/protected/page.php?logout=1"&gt;Logout&lt;/a&gt;<br><br>Upon logout script will redirect user to the URL you specified on step 1.
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg707"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=149" title="View the profile of sabotage">sabotage</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=149"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 4</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_707" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=707" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=707" rel="nofollow" title="Reply #1Re: Adding Logout link" class="smalltext">June 19, 2007, 06:43:54 AM</a>
+									<span class="page_number floatright">
+										 #1 
+									</span>
+									<span class="smalltext modified floatright" id="modified_707">
+									</span>
+								</h5>
+								<div id="msg_707_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="707" id="msg_707">
+									Very useful thanks!!!
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg713"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152" title="View the profile of dmax">dmax</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 4</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_713" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=713" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=713" rel="nofollow" title="Reply #2Re: Adding Logout link" class="smalltext">June 21, 2007, 11:59:26 PM</a>
+									<span class="page_number floatright">
+										 #2 
+									</span>
+									<span class="smalltext modified floatright" id="modified_713">
+									</span>
+								</h5>
+								<div id="msg_713_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="713" id="msg_713">
+									Script works great. Also installed logout script which is exactly what i needed. There is 1 small problem, after logout if I hit the browser back button it takes me right back into the protected page I just logged out of.&nbsp; Is there a way to fix this.&nbsp; Cheers, -d
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg715"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_715" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=715" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=715" rel="nofollow" title="Reply #3Re: Adding Logout link" class="smalltext">June 22, 2007, 12:36:07 AM</a>
+									<span class="page_number floatright">
+										 #3 
+									</span>
+									<span class="smalltext modified floatright" id="modified_715">
+									</span>
+								</h5>
+								<div id="msg_715_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="715" id="msg_715">
+									Browser cached protected page. Add following code to all protected pages (to avoid caching):<br><br>&nbsp; &lt;META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"&gt;<br>&nbsp; &lt;META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"&gt;<br><br>The code needs to be placed somewhere between &lt;head&gt; and &lt;/head&gt; tags.<br><br>For example page's HTML code was<br><br>&lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Custom Title&lt;/title&gt;<br>&lt;/head&gt;<br>...<br><br>after change it would be<br><br><br>&lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Custom Title&lt;/title&gt;<br>&nbsp; &lt;META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"&gt;<br>&nbsp; &lt;META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"&gt;<br>&lt;/head&gt;<br>...<br>
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg716"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152" title="View the profile of dmax">dmax</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 4</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_716" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=716" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=716" rel="nofollow" title="Reply #4Re: Adding Logout link" class="smalltext">June 22, 2007, 04:16:45 AM</a>
+									<span class="page_number floatright">
+										 #4 
+									</span>
+									<span class="smalltext modified floatright" id="modified_716">
+									</span>
+								</h5>
+								<div id="msg_716_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="716" id="msg_716">
+									I tried this and it doesnt seem to work. Before I copied the script into my file, I converted the script into php. <br>Here's what it looks like inside my protect php page.<br><br>echo "&nbsp; &lt;head&gt;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /&gt;\n";<br>echo "&lt;META HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\"&gt;&lt;META HTTP-EQUIV=\"PRAGMA\" CONTENT=\"NO-CACHE\"&gt;\n";<br>echo "&nbsp; \n";<br>echo "&nbsp; \n";<br>echo "\n";<br>echo "&lt;body&gt;\n";<br>echo "&nbsp; &nbsp; &lt;meta name=\"Generator\" content=\"iWeb 1.1.2\" /&gt;\n";<br>echo "&nbsp; &nbsp; &lt;title&gt;Calendar_1&lt;/title&gt;\n";<br>echo "&nbsp; &nbsp; &lt;link rel=\"icon\" href=\"favicon.ico\"&gt;\n";<br>echo "&lt;link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"Calendar_1_files/Calendar_1.css\" /&gt;&lt;script type=\"text/javascript\" src=\"Calendar_1_files/Calendar_1.js\"&gt;&lt;/script&gt;\n";<br>echo "&nbsp; &lt;/head&gt;\n";<br>
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg717"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152" title="View the profile of dmax">dmax</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 4</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_717" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=717" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=717" rel="nofollow" title="Reply #5Re: Adding Logout link" class="smalltext">June 22, 2007, 04:26:33 AM</a>
+									<span class="page_number floatright">
+										 #5 
+									</span>
+									<span class="smalltext modified floatright" id="modified_717">
+									</span>
+								</h5>
+								<div id="msg_717_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="717" id="msg_717">
+									Would it be easier to adjust the log out script so the redirect page ('LOGOUT_URL', 'http://www.example.com/');&nbsp; opens in a new browser window?&nbsp; If yes, how would I do this? Thank You! Cheers, -dmax
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg718"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_718" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=718" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=718" rel="nofollow" title="Reply #6Re: Adding Logout link" class="smalltext">June 22, 2007, 01:15:29 PM</a>
+									<span class="page_number floatright">
+										 #6 
+									</span>
+									<span class="smalltext modified floatright" id="modified_718">
+									</span>
+								</h5>
+								<div id="msg_718_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="718" id="msg_718">
+									Currently you have body tag inside header. This is not correct. Move echo "&lt;body&gt;\n"; after the &lt;/header&gt;.<br><br>In order to open in a new browser window add <b>target="_blank"</b> to the logout url, like this:<br><br>&lt;a href="http://www.example.com/path/to/protected/page.php?logout=1" <b>target="_blank"</b>&gt;Logout&lt;/a&gt;
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg720"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152" title="View the profile of dmax">dmax</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=152"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 4</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_720" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=720" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=720" rel="nofollow" title="Reply #7Re: Adding Logout link" class="smalltext">June 22, 2007, 07:16:40 PM</a>
+									<span class="page_number floatright">
+										 #7 
+									</span>
+									<span class="smalltext modified floatright" id="modified_720">
+									</span>
+								</h5>
+								<div id="msg_720_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="720" id="msg_720">
+									Hi, sorry for the trouble. It's still allowing the back button in safari browser to take me back into the secure page. Here's the code, I'm sure there's something wrong.<br><br>&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META HTTP-EQUIV=\"PRAGMA\" CONTENT=\"NO-CACHE\"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&nbsp; \n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&nbsp; \n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=\"Generator\" content=\"iWeb 1.1.2\" /&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Calendar_1&lt;/title&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=\"icon\" href=\"favicon.ico\"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"Calendar_1_files/Calendar_1.css\" /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=\"text/javascript\" src=\"Calendar_1_files/Calendar_1.js\"&gt;&lt;/script&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&lt;/head&gt;\n";<br>&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body style=\"background: transparent url(Images/bckgrnd2.jpg) repeat scroll top left; margin: 0pt; \" onload=\"onPageLoad();\"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=\"text-align: center; \"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=\"margin-bottom: 0px; margin-left: auto; margin-right: auto; margin-top: 0px; overflow: hidden; position: relative;&nbsp; background: transparent; text-align: left; width: 800px; \" id=\"body_content\"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=\"float: left; margin-left: 0px; position: relative; width: 800px; z-index: 0; \" id=\"nav_layer\"&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=\"height: 0px; line-height: 0px; \" class=\"tinyText\"&gt;&nbsp;&lt;/div&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt;a href=\"http://www.midnightlighting.com/Calendar.php?logout=1\"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=\"Calendar_1_files/shapeimage_1.png\" alt=\"LOG OUT!\" title=\"\" id=\"id2\" style=\"height: 47px; left: 306px; position: absolute; top: 1px; width: 187px; z-index: 1; \" /&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=\"height: 50px; line-height: 50px; \" class=\"tinyText\"&gt;&nbsp;&lt;/div&gt;\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "<br>
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1215"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292" title="View the profile of tinem">tinem</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 3</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1215" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1215" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1215" rel="nofollow" title="Reply #8Re: Adding Logout link" class="smalltext">November 11, 2007, 05:12:51 PM</a>
+									<span class="page_number floatright">
+										 #8 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1215">
+									</span>
+								</h5>
+								<div id="msg_1215_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1215" id="msg_1215">
+									First I like to thank you for this great script. I just have some problems that when closing the browserwindow it doesn't clear the access and I have put this code in the passwordprotected file as you suggest like this:<br>&nbsp;&nbsp;&nbsp;&lt;META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"&gt;<br>&nbsp; &nbsp;&nbsp;&nbsp;&lt;META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"&gt;<br><br>It's working if I click the Logout link but is there a way to get it functioning when closing the browserwindow beside what I have done?<br><br>Click on the map link from this site http://www.tinemuller.dk/Saving_User-Added_Form_Data/ and login as admin - adminpass and then you can see what I'm talking about.<br><br><b>Do you have a script for password protect a folder?</b><br><br>
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1221"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1221" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1221" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1221" rel="nofollow" title="Reply #9Re: Adding Logout link" class="smalltext">November 12, 2007, 03:37:23 PM</a>
+									<span class="page_number floatright">
+										 #9 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1221">
+									</span>
+								</h5>
+								<div id="msg_1221_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1221" id="msg_1221">
+									Hi. I tried that url in IE and Firefox. Both logged out when i closed browser. What browser you are using?
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1222"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292" title="View the profile of tinem">tinem</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 3</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1222" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1222" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1222" rel="nofollow" title="Reply #10Re: Adding Logout link" class="smalltext">November 12, 2007, 03:47:37 PM</a>
+									<span class="page_number floatright">
+										 #10 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1222">
+									</span>
+								</h5>
+								<div id="msg_1222_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1222" id="msg_1222">
+									Thanks for your quick reply.<br><br>Firefox 2.0.0.9 it's not functioning but Explorer 6 it's OK. I use xp pro if it matters. After you close the browser window try pasting the adress http://www.tinemuller.dk/Saving_User-Added_Form_Data/phpsqlinfo_add.php again and you will se the problem.<br><br>What about my other question about password protect a folder?<br><br>
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1225"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1225" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1225" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1225" rel="nofollow" title="Reply #11Re: Adding Logout link" class="smalltext">November 12, 2007, 05:27:11 PM</a>
+									<span class="page_number floatright">
+										 #11 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1225">
+									</span>
+								</h5>
+								<div id="msg_1225_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1225" id="msg_1225">
+									I have 2.0.0.9. Opened that page, logged in, closed browser. Opened page again. Login dialog appeared. Not sure why your Firefox is working differently. I'm on XP pro also. Maybe firefox cached page. Try Ctrl+F5 on that page afte you log in.
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1226"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292" title="View the profile of tinem">tinem</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=292"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/icon.png" alt="*"></li>
+								<li class="postgroup">Newbie</li>
+								<li class="postcount">Posts: 3</li>
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1226" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1226" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1226" rel="nofollow" title="Reply #12Re: Adding Logout link" class="smalltext">November 12, 2007, 06:26:17 PM</a>
+									<span class="page_number floatright">
+										 #12 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1226">
+									</span>
+								</h5>
+								<div id="msg_1226_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1226" id="msg_1226">
+									It's still the same. So maybe I should leave out close the browser and only have click logout?<br><br>If you don't have a script for password protect a folder please tell me yes og no?
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+				<div class="windowbg">
+					
+					<a id="msg1227"></a>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1" title="View the profile of zubrag">zubrag</a>
+							</h4>
+							<ul class="user_info">
+								<li class="avatar">
+									<a href="http://www.zubrag.com/forum/index.php?action=profile;u=1"><img class="avatar" src="./Adding Logout link_files/default.png" alt=""></a>
+								</li>
+								<li class="icons"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"><img src="./Adding Logout link_files/iconadmin.png" alt="*"></li>
+								<li class="membergroup">Administrator</li>
+								<li class="postgroup">Hero Member</li>
+								<li class="postcount">Posts: 790</li>
+								<li class="profile">
+									<ol class="profile_icons">
+										<li><a href="http://www.zubrag.com/" title="PHP / cPanel scripts" target="_blank" rel="noopener"><span class="main_icons www centericon" title="PHP / cPanel scripts"></span></a></li>
+									</ol>
+								</li><!-- .profile -->
+								<li class="poster_ip">Logged</li>
+							</ul>
+						</div><!-- .poster -->
+						<div class="postarea">
+							<div class="keyinfo">
+								<div id="subject_1227" class="subject_title subject_hidden">
+									<a href="http://www.zubrag.com/forum/index.php?msg=1227" rel="nofollow">Re: Adding Logout link</a>
+								</div>
+								<h5>
+									<span class="messageicon" style="position: absolute; z-index: -1;">
+										<img src="./Adding Logout link_files/xx.png" alt="">
+									</span>
+									<a href="http://www.zubrag.com/forum/index.php?msg=1227" rel="nofollow" title="Reply #13Re: Adding Logout link" class="smalltext">November 12, 2007, 07:12:42 PM</a>
+									<span class="page_number floatright">
+										 #13 
+									</span>
+									<span class="smalltext modified floatright" id="modified_1227">
+									</span>
+								</h5>
+								<div id="msg_1227_quick_mod"></div>
+							</div><!-- .keyinfo -->
+							<div class="post">
+								<div class="inner" data-msgid="1227" id="msg_1227">
+									Sorry, forgot to answer that one. No specific script for protecting folders, unless you protect each file in the folder using password protector. If you want to protect a folder try using .htaccess protection (should be some 'protect folder' menu in your webhosting account management to do that).
+								</div>
+							</div><!-- .post -->
+							<div class="under_message">
+							</div><!-- .under_message -->
+						</div><!-- .postarea -->
+						<div class="moderatorbar">
+						</div><!-- .moderatorbar -->
+					</div><!-- .post_wrapper -->
+				</div><!-- $message[css_class] -->
+				<hr class="post_separator">
+			</form>
+		</div><!-- #forumposts -->
+		<div class="mobile_buttons floatright">
+			<a class="button mobile_act">User actions</a>
+			
+		</div>
+		<div class="pagesection">
+			
+		<div class="buttonlist floatright">
+			
+				<a class="button button_strip_print" href="http://www.zubrag.com/forum/index.php?action=printpage;topic=202.0" rel="nofollow">Print</a>
+		</div>
+			 
+			<div class="pagelinks floatleft">
+				<a href="http://www.zubrag.com/forum/index.php/topic,202.0.html#main_content_section" class="button" id="bot">Go Up</a>
+				<span class="pages">Pages</span><span class="current_page">1</span> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.14.html">2</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.28.html">3</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.42.html">4</a> <a class="nav_page" href="http://www.zubrag.com/forum/index.php/topic,202.14.html"><span class="main_icons next_page"></span></a> 
+			</div>
+		</div>
+				<div class="navigate_section">
+					<ul>
+						<li>
+							<a href="http://www.zubrag.com/forum/index.php"><span>Zubrag.com :: Forum</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php#c2"><span>zubrag.com</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/board,3.0.html"><span>Questions About Our Scripts</span></a>
+						</li>
+						<li>
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/board,11.0.html"><span>Password Protect</span></a>
+						</li>
+						<li class="last">
+							<span class="dividers"> ► </span>
+							<a href="http://www.zubrag.com/forum/index.php/topic,202.0.html"><span>Adding Logout link</span></a>
+						</li>
+					</ul>
+				</div><!-- .navigate_section -->
+		<div id="moderationbuttons">
+			
+		</div>
+		<div id="display_jump_to"><label class="smalltext jump_to" for="display_jump_to_select">Jump to</label> <select name="display_jump_to_select" id="display_jump_to_select"><option value="?board=11.0">===&gt; Password Protect</option></select>&nbsp;<input type="button" class="button" value="Go" onclick="window.location.href = &#39;http://www.zubrag.com/forum/index.php?board=11.0&#39;;"></div>
+		<div id="mobile_action" class="popup_container">
+			<div class="popup_window description">
+				<div class="popup_heading">
+					User actions
+					<a href="javascript:void(0);" class="main_icons hide_popup"></a>
+				</div>
+				
+		<div class="buttonlist">
+			
+				<a class="button button_strip_print" href="http://www.zubrag.com/forum/index.php?action=printpage;topic=202.0" rel="nofollow">Print</a>
+		</div>
+			</div>
+		</div>
+		<script>
+			if ('XMLHttpRequest' in window)
+			{
+				var oQuickModify = new QuickModify({
+					sScriptUrl: smf_scripturl,
+					sClassName: 'quick_edit',
+					bShowModify: false,
+					iTopicId: 202,
+					sTemplateBodyEdit: '\n\t\t\t\t\t\t<div id="quick_edit_body_container">\n\t\t\t\t\t\t\t<div id="error_box" class="error"><' + '/div>\n\t\t\t\t\t\t\t<textarea class="editor" name="message" rows="12" tabindex="1">%body%<' + '/textarea><br>\n\t\t\t\t\t\t\t<input type="hidden" name="c8fa1ca236" value="41740e67422b2ced47ffa49054c4932d">\n\t\t\t\t\t\t\t<input type="hidden" name="topic" value="202">\n\t\t\t\t\t\t\t<input type="hidden" name="msg" value="%msg_id%">\n\t\t\t\t\t\t\t<div class="righttext quickModifyMargin">\n\t\t\t\t\t\t\t\t<input type="submit" name="post" value="Save" tabindex="2" onclick="return oQuickModify.modifySave(\'41740e67422b2ced47ffa49054c4932d\', \'c8fa1ca236\');" accesskey="s" class="button"> <input type="submit" name="cancel" value="Cancel" tabindex="3" onclick="return oQuickModify.modifyCancel();" class="button">\n\t\t\t\t\t\t\t<' + '/div>\n\t\t\t\t\t\t<' + '/div>',
+					sTemplateSubjectEdit: '<input type="text" name="subject" value="%subject%" size="80" maxlength="80" tabindex="4">',
+					sTemplateBodyNormal: '%body%',
+					sTemplateSubjectNormal: '<a hr'+'ef="' + smf_scripturl + '?topic=202.msg%msg_id%#msg%msg_id%" rel="nofollow">%subject%<' + '/a>',
+					sTemplateTopSubject: '%subject%',
+					sTemplateReasonEdit: 'Reason for editing: <input type="text" name="modify_reason" value="%modify_reason%" size="80" maxlength="80" tabindex="5" class="quickModifyMargin">',
+					sTemplateReasonNormal: '%modify_text',
+					sErrorBorderStyle: '1px solid red'
+				});
+
+				aJumpTo[aJumpTo.length] = new JumpTo({
+					sContainerId: "display_jump_to",
+					sJumpToTemplate: "<label class=\"smalltext jump_to\" for=\"%select_id%\">Jump to<" + "/label> %dropdown_list%",
+					iCurBoardId: 11,
+					iCurBoardChildLevel: 1,
+					sCurBoardName: "Password Protect",
+					sBoardChildLevelIndicator: "==",
+					sBoardPrefix: "=> ",
+					sCatSeparator: "-----------------------------",
+					sCatPrefix: "",
+					sGoButtonLabel: "Go"
+				});
+
+				aIconLists[aIconLists.length] = new IconList({
+					sBackReference: "aIconLists[" + aIconLists.length + "]",
+					sIconIdPrefix: "msg_icon_",
+					sScriptUrl: smf_scripturl,
+					bShowModify: false,
+					iBoardId: 11,
+					iTopicId: 202,
+					sSessionId: smf_session_id,
+					sSessionVar: smf_session_var,
+					sLabelIconList: "Message icon",
+					sBoxBackground: "transparent",
+					sBoxBackgroundHover: "#ffffff",
+					iBoxBorderWidthHover: 1,
+					sBoxBorderColorHover: "#adadad" ,
+					sContainerBackground: "#ffffff",
+					sContainerBorder: "1px solid #adadad",
+					sItemBorder: "1px solid #ffffff",
+					sItemBorderHover: "1px dotted gray",
+					sItemBackground: "transparent",
+					sItemBackgroundHover: "#e0e0f0"
+				});
+			}
+		</script>
+			</div><!-- #main_content_section -->
+		</div><!-- #content_section -->
+	</div><!-- #wrapper -->
+</div><!-- #footerfix -->
+	<div id="footer">
+		<div class="inner_wrap">
+		<ul>
+			<li class="floatright"><a href="http://www.zubrag.com/forum/index.php?action=help">Help</a> | <a href="http://www.zubrag.com/forum/index.php?action=agreement">Terms and Rules</a> | <a href="http://www.zubrag.com/forum/index.php/topic,202.0.html#top_section">Go Up ▲</a></li>
+			<li class="copyright"><a href="http://www.zubrag.com/forum/index.php?action=credits" title="License" target="_blank" rel="noopener">SMF 2.1 RC3 © 2020</a>, <a href="http://www.simplemachines.org/" title="Simple Machines" target="_blank" rel="noopener">Simple Machines</a></li>
+		</ul>
+		</div>
+	</div><!-- #footer -->
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+	function triggerCron()
+	{
+		$.get('http://www.zubrag.com/forum' + "/cron.php?ts=1628589915");
+	}
+	window.setTimeout(triggerCron, 1);
+});
+</script>
+
+</body></html>

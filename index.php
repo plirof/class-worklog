@@ -12,4 +12,6 @@ $checkbox_show_submit=true; //activate checkbox to show submit button
 //load main file
 require ('worklog.php');
 
+
 ?>
+<a href="?logout=1">Logout</a>
