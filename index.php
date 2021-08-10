@@ -1,3 +1,4 @@
+<?php include("password_protect.php"); ?>
 <?php
 //SET SOME OPTIONS :
 //$show_logical_header=true; // for many checkboxes (poor man freeze forst column alternative)
