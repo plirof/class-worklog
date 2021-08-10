@@ -43,6 +43,7 @@ Note: only passwords are listed
 $LOGIN_INFORMATION = array(
   'root',
   'testpass',
+  'view' => 'test',
   'passwd'
 );
 
@@ -58,11 +59,28 @@ $LOGIN_INFORMATION = array(
 $LOGIN_INFORMATION = array(
   'zubrag' => 'root',
   'jon' => 'jon',
+  'view' => 'test',
   'admin' => 'adminpass'
 );
 
 // request login? true - show login and password boxes, false - password box only
 define('USE_USERNAME', true);
+
+
+// use the $LOGIN_USERLEVELS to get role userlevels (based on password - not username)
+define('USE_USERLEVELS', true);
+
+$login_current_userlevel="10";
+//++++210810b jon add on for User level (0=root ,1=edit all ,2=edit last 10 entries ,3=edit last entry ,5=just view ++++++++++++++++
+$LOGIN_USERLEVELS = array( //NOTE first key is PASSWORD not username
+  'root' => '0',
+  'testpass' => '3',
+  'passwd' => '2',
+  'test' => '5',
+);
+//--------jon add on for User level---------------
+
+
 
 // User will be redirected to this page after logout
 //define('LOGOUT_URL', 'http://www.example.com/');
@@ -122,7 +140,7 @@ function showLoginPasswordProtect($error_msg) {
     <input type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
   </form>
   <br />
-  <a style="font-size:9px; color: #B0B0B0; font-family: Verdana, Arial;" href="http://www.zubrag.com/scripts/password-protect.php" title="Download Password Protector">Powered by Password Protect</a>
+  <!--<a style="font-size:9px; color: #B0B0B0; font-family: Verdana, Arial;" href="http://www.zubrag.com/scripts/password-protect.php" title="Download Password Protector">Powered by Password Protect</a> -->
   </div>
 </body>
 </html>
