@@ -68,11 +68,11 @@ define('USE_USERNAME', true);
 
 
 // use the $LOGIN_USERLEVELS to get role userlevels (based on password - not username)
-define('USE_USERLEVELS', true);
+define('JON_USE_USERLEVELS', true);
 
 $login_current_userlevel="10";
 //++++210810b jon add on for User level (0=root ,1=edit all ,2=edit last 10 entries ,3=edit last entry ,5=just view ++++++++++++++++
-$LOGIN_USERLEVELS = array( //NOTE first key is PASSWORD not username
+$JON_LOGIN_USERLEVELS = array( //NOTE first key is PASSWORD not username
   'root' => '0',
   'testpass' => '3',
   'passwd' => '2',
