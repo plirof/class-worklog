@@ -21,6 +21,7 @@ will create a backup for the file names worklog.txt -> worklog_backup_170504.txt
 
 
 Changes:
+- 1.2jmod11-220501a - added password option to ACCEPT submit
 - 210201 http://..../class-worklog/index.php?backup=true
 - 1.2jmod11-201028_checkbox_show_submit show only when you check a checkbox
 - 1.2jmod11-200109_isset_checks_instead_of_from_empty() to isset()

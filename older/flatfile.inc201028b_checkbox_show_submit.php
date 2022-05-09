@@ -4,7 +4,6 @@ date_default_timezone_set('Europe/Athens'); //added to avoid PHP warning for dat
 # Flat File Database Manager 1.2jmod11-200109_isset_checks
 #
 # changes:
-# 1.2jmod11-220501a - added password option to ACCEPT submit
 # 1.2jmod11-201028b_checkbox_show_submit show only when you check a checkbox
 # 1.2jmod11-200109_isset_checks_instead_of_from_empty() to isset()
 # 1.2jmod11-200108_submit_button option , edit.php , index.php=only view)
@@ -73,7 +72,6 @@ if (get_magic_quotes_gpc()) {
   //$_COOKIE = stripslashes_deep($_COOKIE);
 }
 
-//Set these in INDEX.PHP
 if(!isset($show_empty_lines))$show_empty_lines=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($add_class_to_element))$add_class_to_element=true; //190319 adds class name to each element(so we can add custom js for this element )
 if(!isset($show_internal_element_text_outside))$show_internal_element_text_outside=false; //Show element text outside (Helps sorting!!)
@@ -81,9 +79,6 @@ if(!isset($sorttable_js))$sorttable_js=true; // might need $show_internal_elemen
 if(!isset($show_logical_header))$show_logical_header=false; //If disabled(false) might have problem if you have empty lines
 if(!isset($show_submit_button))$show_submit_button=true;  //200108 index.php:false-read-only / edit.php :true shows submit
 if(!isset($checkbox_show_submit))$checkbox_show_submit=true;  //201028 $checkbox_show_submit show only when you check a checkbox
-$password_activated=false ; 
-if(isset($password))$password_activated=true;  //220501 $password_activated (True will need password to ACCEPT submit ) will need PASSWORD textfield too . If password is wrong then it willjust ignore submit
-
 
 
 $structure_tmp = file($structure_file);
@@ -115,14 +110,7 @@ foreach($structure_tmp as $key=>$tmp) {
 // Save data (Submit button pressed)
 if (isset($_POST['submit'])) {
   /////////////////////////////////////////////////
-  if($password_activated) {  //220501 $password_activated
-    echo "<h1>Password activated</h1>";
-    
-    if($password!=$_POST['password']) {
-        echo "<h1>Wrong Password</h1>";
-        exit(1);
-    }
-  }
+
   if ($skip_lines > 0) {
     // read header lines
     $tmp_data = file($data_file);
@@ -160,7 +148,7 @@ if (isset($_POST['submit'])) {
     } // for
     fclose($f);
   } // if
- ////// header("location: index.php");   //added jon 161112 by jon to avoid resubmissions  (if you restore session will always do a normal load)  
+  header("location: index.php");   //added jon 161112 by jon to avoid resubmissions  (if you restore session will always do a normal load)  
 }
 
 $data = file($data_file);
@@ -353,10 +341,6 @@ echo '</table>';
 
 
 if ($show_submit_button) {echo '<center><input type="submit" name="submit" id="submit_button_id" value="Save Changes and Delete marked" style="border:1px solid red"></center>';} else {echo '<center>READ ONLY MODE</center>';}//200108 show/hide submit button'
-if($password_activated) {
-  echo '<input type="password" name="password" id="password" value="" style="border:1px solid red">';
-
-}
 
 if ($checkbox_show_submit) {
   echo '
